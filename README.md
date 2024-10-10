@@ -16,6 +16,7 @@ Létt lýsing á uppsetningu verkefnis, hvernig því er skipt í möppur, hvern
 ## Upplýsingar um nemendur
 
 María Björk Gunnarsdóttir, mgb13@hi.is, GitHub: maria-bjork.
+Brynja Kristinsdóttir, brk22@hi.is, github: brykri22.
 
 
 Upplýsingar um alla sem unnu verkefni, nöfn, HÍ notendanöfn og GitHub notendanöfn# Vef1-2024-Hopverkefni-1
