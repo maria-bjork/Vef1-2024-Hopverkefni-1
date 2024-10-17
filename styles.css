@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-size-base: 16px;
+  --font-size-headings: 1.5rem;
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space: calc(var(--gutter) * 1);
+  --vertical-space-large: calc(var(--gutter) * 1.5);
+  /* Hámarks og lágmarks breidd á efni */
+  --max-width: 1200px;
+  --min-width-image: 200px;
+  --max-width-image: 300px;
+  --max-width-footer-section: 250px;
+  /* Border breiddir */
+  --border-width: 1px;
+  --border-radius-regular: 5px;
+  --border-radius-image: 10px;
+  --border-regular: 1px solid #000;
+
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+
+  /* Breidd á efni með offset */
+  --width-offset: calc(100% - (2 * var(--offset)));}
+
+
+
+  html {
+    /* Reiknum stærð á öllum boxum sem border-box */
+    box-sizing: border-box;
+    /* Til að transition sé ekki frá hvítum */
+
+    /* Grunnstærð er 16px */
+    font-size: var(--font-size-base);
+  }
+  
+  /* og látum erfast á allt */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+  .sr-only:not(:focus, :active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+
+  /*Almennt*/
+
+  /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/*Litir*/
+
+/*Letur stillingsar*/
+
+
+.wrapper {
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
+  width: 100%;
+  min-height: 100vh;
+ 
+}
+
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+
+.wrapper-nav{
+ margin-bottom: var(--spacing);
+ grid-column: span 10;
+}
+
+/*navigation*/
+
+nav{
+  width: 100%
+}
+
+nav ul{
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li{
+  margin-bottom: 2rem; 
+}
+
+nav ul li a{
+  text-decoration: none;
+}
+
+.latest-recipe{
+  background-color: green;
+}
+
+.cards{
+  background-color: yellow;
+}
+
+.card{
+  background-color: red;
+}
+
+.magazine{
+  background-color: purple;
+}
+
+.newsletter{
+  background-color: black;
+}
+
+footer{
+  background-color: blueviolet;
+}
+
